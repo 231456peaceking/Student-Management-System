@@ -1,0 +1,2 @@
+101|Spongebob Squarepants|10A|0712345678
+102|Patrick Star|10A|0798765432
