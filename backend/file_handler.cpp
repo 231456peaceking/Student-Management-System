@@ -2,13 +2,16 @@
 #include <iostream>
 #include <sstream>
 #include "student.h"
-
 void add_student(Student s){
     std::ofstream file("data/students.txt", std::ios::app);
-    file<<s.roll<<"|"<<s.name<<"|"<<s.className<<"|"<<s.contact<<"\n";
-    file.close();
-}
 
+    if(!file){
+        std::cerr << "Error opening file\n";
+        return;
+    }
+
+    file << s.roll << "|" << s.name << "|" << s.className << "|" << s.contact << std::endl;
+}
 void view_students(){
     std::ifstream file("data/students.txt");
     std::string line;
